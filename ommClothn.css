@@ -32,7 +32,7 @@ html, body, main {
     body {
       background-color: var(--primary-color);
       color: var(--secondary-color);
-      font-family: sans-serif;
+      font-family: serif;
       height: 100%;
     }
 
@@ -300,7 +300,7 @@ button:focus {
 /* Slider Style Ends Here*/
 
 .asideBar {
-    height: 88.8%;
+    height: 88.7%;
     width: 20.5%;
     position: fixed;
     top: 7.25%;
@@ -466,12 +466,12 @@ button:focus {
       
       .copyright {
           color: #FFF;
-          margin-top: 0.7rem;
+          margin-top: 0.5rem;
           margin-left: 2rem;
       }
       
       .footerNav {
-          margin-top: -2.7rem ;
+          margin-top: -2.5rem ;
       
           float: left;
           margin-left: 35%;
