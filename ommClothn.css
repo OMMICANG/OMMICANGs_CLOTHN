@@ -468,6 +468,7 @@ button:focus {
           color: #FFF;
           margin-top: 0.5rem;
           margin-left: 2rem;
+          font-size: small;
       }
       
       .footerNav {
@@ -483,7 +484,7 @@ button:focus {
           display: inline;
           border-right:1px solid #FFF;
           padding-right: 10px;
-          font-size: small;
+          font-size: smaller;
           font-family: inherit;
       }
       
