@@ -1,0 +1,505 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Inclusion+ to make height responsive on device change*/
+html, body, main {
+    height:100%;
+  }
+  :root {
+    height: 100%;
+  }
+
+  /* DarkMode style */
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: rgba(00, 00, 00, 0.5);
+    --border-primary: rgba(0, 0, 0, 0.9);
+    --top-headerCol:  rgba(44, 60, 92, 1);
+    }
+    
+    .dark-mode {
+    --primary-color: rgba(0, 0, 0, 0.7);
+    --secondary-color: #fff;
+    --border-primary: rgba(179, 0, 0, 0.9);
+    --top-headerCol: rgba(50, 50, 50, 1);
+    }
+    
+    body {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      font-family: sans-serif;
+      height: 100%;
+    }
+
+.top-header{ /* header link*/
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--top-headerCol);
+    width: 100%;
+    height: 7%; /* new Height % use stead rem */
+    top:0;
+    }
+
+    .logoImg {
+        height: 150px;
+        width:  180px; 
+       margin-top: -1.9rem;
+    }
+
+    .thinBlackBorder { /* thin borderline*/
+      border-style: solid;
+      border-width: 0.0625rem 0.0625rem 0.0625rem 0.0625rem;
+      border-color: var(--border-primary);
+      }
+
+      .thinRedBorder {
+      border-style: solid;
+      border-width: 0rem 0rem 0.0625rem;
+      border-color: rgba(179, 0, 0, 0.9);
+      }
+
+      /* Toggle Button Starts Here */
+
+      #toggle {
+        display: none;
+    }
+    
+    #button {
+        display: inline-block;
+        width: 50px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 30px;
+        position: relative;
+        cursor: pointer;
+        top: 0.6rem;
+        left: 80%;
+    }
+    
+    #button::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f186" ;
+        /* Add in the image. You could also add an icon by the using the icon's unicode (sites like fontawesome.com provide this). */
+    width: 25px;
+    height: 25px;
+    /* Making the icon slightly taller than the button container. */
+    background-color: #e03c3c;
+    color: rgba(0, 0, 50, 0.8);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+    position: absolute;
+    top: -5px;
+    /* Since the button has a height of 35px and the ::after has 40px, we offset the difference by pushing it up by 5px to center this element vertically. */
+    left: 0;
+    display: grid;
+    /* Used for centering the icon image in the middle in conjunction with place content center. */
+    place-content: center;
+    line-height: 0;
+    /*By default this will have a line height. This means that the image will not be perfectly centered by using the properties above. To make sure we can center this image in the middle, we make the line height 0. */
+    transition: background-color 1.5s,
+        transform 1.3s ease-in; /* check to see if image transformation time can be altered*/
+}
+
+#toggle:checked+#button::after {
+    content: url('./svgImg/moon-svgrepo-com.svg');
+    /* Switching the images when clicked. */
+    background-color: #1f257f;
+    font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f185" ; 
+      color: rgba(250, 150, 50, 150.9);
+    transform: translateX(20px) rotate(360deg);
+    /* Since the width of the button is 90px and the pseudo element is 40px we translate by a number that adds up to 90. So we translate to the right by 50px ( 40 + 50 = 90 width of the button). We also rotate this element by 360 degrees. */
+}
+
+      /* Toggle Button Ends Here */
+
+
+    .side-header {
+        background-color: rgba(0, 11, 16, 0.9);
+        height: 90%;
+        width: 5%;
+        z-index: 0;
+        display: flex;
+        position: fixed;
+        top: 7%;
+        border-style: solid;
+      border-width: 0rem 0.0625rem 0rem 0rem  ;
+      border-color: rgba(179, 0, 0, 0.9);
+      justify-content: center;
+    }
+
+       li, .fa-solid {
+      color: #fff;
+      list-style: none;
+      margin-top: 2.8rem;
+      cursor: pointer;
+
+    }
+
+    li, .fa-solid:hover{
+      color: rgba(50, 0, 0, 1);
+      transition: color 0.5s ease-in;
+    }
+
+    /*------- V-SLIDER STARTS HERE {Credits >  Web Dev @YouTube} ------*/
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 74.3%;
+    height: 88.7%;
+    top: 7.25%;
+    left: 5.1%;
+
+}
+
+.left-slide {
+    height: 100%;
+    width: 45%;
+    position: absolute;
+    transition: transform .5s ease-in-out;
+    font-family: 'Lobster';
+
+}
+
+.left-slide > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+}
+
+ .left-slide h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+.left-slide p {
+  font-size: 30px;
+}
+
+.left-slide a {
+    text-decoration: none;
+    margin-top: 15px;
+    padding: 20px 60px;
+    border-radius: 25px;
+    color: #fff;
+    background: linear-gradient(to bottom, #bea2e7 0%, #1e4266 100%);
+    transition: all 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.left-slide a:hover {
+  transform: scale(0.94);
+  border: 0.1px dotted black;
+
+}
+
+.right-slide{
+    height: 100%;
+    position: absolute;
+    left: 45%;
+    width: 55%;
+    transition: all 0.7s ease-in-out;
+
+}
+
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*---- H-SLIDER STARTS HERE */
+
+.swiper, .swiper-wrapper {
+  height: inherit;
+  width: inherit;
+
+}
+
+.swiper, .swiper-wrapper,.swiper-slide{
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  background-position: center center;
+  transition: all .7s ease-in-out;
+
+}
+
+.swiper  .swiper-pagination {
+  bottom: -95%;
+  left: 5%;
+
+}
+
+.swiper .swiper-pagination-bullet-active{
+  background-color: #fff; /* Reminder to check why background color doesn't switch*/
+}
+
+/*---- H-SLIDER ENDS HERE */
+
+
+
+.slider-container .action-buttons button {
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    z-index: 100;
+}
+
+
+.slider-container .action-buttons .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.slider-container .action-buttons .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+button {
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px;
+}
+
+button:hover {
+    color: #222;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Slider Style Ends Here*/
+
+.asideBar {
+    height: 88.8%;
+    width: 20.5%;
+    position: fixed;
+    top: 7.25%;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(1, 34, 47, 0.6);
+    overflow-x: hidden ;
+    border-style: solid;
+    border-width: 0.0938rem 0.0938rem 0.0938rem;
+    border-color: rgba(179, 0, 0, 0.9);
+    
+    }
+    .asideHeading {
+    text-align: center;
+    font-family:Lobster;
+    font-size: x-large;
+    color: rgba(77, 0, 0, 0.9);
+    margin-top: 0.2rem;
+    }
+    
+    hr {
+    margin-top: 0.15rem;
+    width: 45%;
+    border-top: 0.0313rem dashed green;
+    margin-left: 25%;
+    }
+    
+    /* vSlider Code by @CodingNepal(YouTube) */
+    
+    .wrapper .outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .wrapper .card{
+    margin-top: 17rem;
+    background: rgba(255, 255, 255, 0.5);
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    justify-content: space-between;
+    border-radius: 100px 20px 20px 100px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    animation: animate 15s linear infinite;
+    animation-delay: calc(3s * var(--delay));
+    }
+    
+    .outer:hover .card{
+    animation-play-state: paused;
+    }
+    
+    .wrapper .card:last-child{
+    animation-delay: calc(-3s * var(--delay));
+    }
+    
+    @keyframes animate {
+    0%{
+      opacity: 0;
+      transform: translateY(100%) scale(0.5);
+    }
+    5%, 20%{
+      opacity: 0.4;
+      transform: translateY(100%) scale(0.7);
+    }
+    25%, 40%{
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0%) scale(1);
+    }
+    45%, 60%{
+      opacity: 0.4;
+      transform: translateY(-100%) scale(0.7);
+    }
+    65%, 100%{
+      opacity: 0;
+      transform: translateY(-100%) scale(0.5);
+    }
+    }
+    
+    .card .content{
+    display: flex;
+    align-items: center;
+    }
+    
+    .wrapper .card .img{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 2px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    }
+    
+    .card .img img{
+    
+    max-width: unset;
+    max-height: unset;
+    margin-left: unset;
+    margin-right: unset;
+    background-color:unset; /* a on this used to be 0.9*/
+    border:unset;
+    border-radius: unset;
+    padding:unset;
+      /**/
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+    
+    .card .details{
+    margin-left: 90px;
+    }
+    
+    .details span{
+      color: rgba(00, 00, 00, 0.9);
+    font-weight: 800;
+    font-size: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    }
+    
+    .draft {
+      color: rgba(00, 00, 00, 0.5);
+    font-size: 15px; /* draft +*/
+    font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .card a{
+    text-decoration: none;
+    padding: 4px 5px;
+    margin-right: -0.4rem;
+    border-radius: 25px;
+    color: #fff;
+    background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
+    transition: all 0.3s ease;
+    }
+    
+    .card a:hover{
+    transform: scale(0.94);
+    }
+    
+    /* End of vSlider Code */
+
+    footer {
+      background-color: rgba(50, 0, 0, 1) ;
+      width: 100%;
+      height: 3.7%;
+      left: 0;
+      bottom: 0;
+      position: fixed;
+      border-style: solid;
+      border-width: 1.5px 0px 0px;
+      border-color: rgba(179, 0, 0, 0.9);
+      }
+      
+      .copyright {
+          color: #FFF;
+          margin-top: 0.7rem;
+          margin-left: 2rem;
+      }
+      
+      .footerNav {
+          margin-top: -2.7rem ;
+      
+          float: left;
+          margin-left: 35%;
+          padding-right: -20px;
+          padding-top: 25px;
+      }
+      
+      .footerNav li {
+          display: inline;
+          border-right:1px solid #FFF;
+          padding-right: 10px;
+          font-size: small;
+          font-family: inherit;
+      }
+      
+      .footerNav li:last-child {
+          border-right: none;
+      }
+       .footerNav a {
+          color: #FFF;
+          text-align: center;
+      }
+      
+      .footerNav a:hover {
+          background-color:inherit;
+          color: #FFF;
+          padding: 0px;
+          border: none;
+      }
+
+    
