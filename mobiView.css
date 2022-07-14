@@ -3,7 +3,7 @@
     .logoImg {
         height: 150px;
         width:  180px; 
-       margin-top: -1.7rem;
+       margin-top: -1.9rem;
        margin-left: -2rem;
     }
 
@@ -16,7 +16,7 @@
         border-radius: 30px;
         position: relative;
         cursor: pointer;
-        top: 0.8rem;
+        top: 0.6rem;
         left: 40%;
     }
 
@@ -59,7 +59,7 @@
         width: 95%;
         left: 5%;
         position: relative;
-        margin-top: 1rem;
+        margin-top: -2rem;
         right: unset;
         z-index: unset;
         background-color: rgba(00, 00, 00, 0.6);
