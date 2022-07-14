@@ -1,0 +1,229 @@
+@media screen and (max-width: 600px)  {
+    
+    .logoImg {
+        height: 150px;
+        width:  180px; 
+       margin-top: -1.7rem;
+       margin-left: -2rem;
+    }
+
+
+    #button {
+        display: inline-block;
+        width: 50px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 30px;
+        position: relative;
+        cursor: pointer;
+        top: 0.8rem;
+        left: 40%;
+    }
+
+    .side-header {
+        background-color: rgba(0, 11, 16, 0.9);
+        height: 94%;
+        width: 5.5%;
+        z-index: 0;
+        display: flex;
+        position: fixed;
+        top: 7%;
+        border-style: solid;
+      border-width: 0rem 0.0625rem 0rem 0rem  ;
+      border-color: rgba(179, 0, 0, 0.9);
+      justify-content: center;
+    }
+
+    .slider-container {
+        position: relative;
+        overflow: hidden;
+        width: 94.9%;
+        height: 88.7%;
+        top: 7.25%;
+        left: 5.1%;
+    
+    }
+    
+    .left-slide {
+        height: 100%;
+        width: 45%;
+        position: absolute;
+        transition: transform .5s ease-in-out;
+        font-family: 'Lobster';
+    
+    }
+    
+
+    .asideBar {
+        height: 45%;
+        width: 95%;
+        left: 5%;
+        position: relative;
+        margin-top: -4.5rem;
+        right: unset;
+        z-index: unset;
+        background-color: rgba(00, 00, 00, 0.6);
+        overflow-x: unset ;
+        border-style: solid;
+        border-width: 0.0938rem 0.0938rem 0.0938rem;
+        border-color: rgba(179, 0, 0, 0.9);
+      
+      }
+
+      .left-slide h1 {
+        font-size: 15px;
+        margin-bottom: 10px;
+        margin-top: -30px;
+    }
+    
+    .left-slide p {
+      font-size: 20px;
+    }
+
+    .left-slide a {
+        text-decoration: none;
+        margin-top: 15px;
+        padding: 15px 40px;
+        border-radius: 25px;
+        color: #fff;
+        background: linear-gradient(to bottom, #bea2e7 0%, #1e4266 100%);
+        transition: all 0.3s ease;
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+
+    footer {
+        background-color: rgba(50, 0, 0, 1) ;
+        width: 100%;
+        height: 5%;
+        left: 5%;
+        bottom: 0;
+        position: fixed;
+        border-style: solid;
+        border-width: 1.5px 0px 0px;
+        border-color: rgba(179, 0, 0, 0.9);
+        }
+
+        .copyright {
+            color: #FFF;
+            margin-top: 0.3rem;
+            font-size: 10px;
+            text-align: center;
+            margin-left: -1rem;
+        }
+
+        .footerNav {
+            margin-top: -1.5rem ;
+            text-align: center;
+            margin-left: 3rem;
+            padding-top: 25px;
+        }
+        
+        .footerNav li {
+            display: inline;
+            border-right:1px solid #FFF;
+            padding-right: 10px;
+            font-size: 10px;
+            font-family: inherit;
+        }
+
+        /*------ HomePage RWD Ends Here ------*/
+        /*------ SubPage RWD Starts Here ------*/
+
+        .about-us {
+            width: 90%;
+            height: 85vh;
+            left: 7.5%;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            position: relative;
+            margin-top: 6rem;
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 2%;
+            box-shadow: -2px 2px 2px 2px black;
+        
+        }
+        
+        .partner {
+            width: 90%;
+            height: 85vh;
+            left: 7.5%;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: inherit;
+            position: relative;
+            margin-top: 2rem;
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 2%;
+            box-shadow: 2px 2px 2px 2px black;
+        
+        }
+        
+        .support {
+            width: 90%;
+            height: 85vh;
+            left: 7.5%;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: inherit;
+            position: relative;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 2%;
+            box-shadow: 2px 2px 2px 2px black;
+        
+        }
+
+        /*---- Sub-Page Ends Here -----*/
+        /*---- Terms Starts Here -----*/
+
+        .terms {
+            width: 90%;
+            height: 75vh;
+            left: 7.5%;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            position: relative;
+            top: 6rem;
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 2%;
+            box-shadow: -2px 2px 2px 2px black;
+        
+        }
+        
+        .privacy-policy {
+            width: 90%;
+            height: 75vh;
+            left: 7.5%;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            position: relative;
+            top: 7rem;
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 2%;
+            box-shadow: 2px 2px 2px 2px black;
+        
+        }
+        
+        .brands {
+            height: 11vh;
+            bottom: 0;
+            width: 94.9%;
+            background-color: rgba(0, 0, 0, .2);
+            left: 5%;
+            display: inline-block;
+            position: relative;
+            top: 8rem;
+            padding-top: 1rem;
+            text-align: center;
+        }
+        
+
+
+        
+
+}
