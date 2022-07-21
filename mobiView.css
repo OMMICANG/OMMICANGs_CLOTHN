@@ -17,7 +17,8 @@
         position: relative;
         cursor: pointer;
         top: 0.6rem;
-        left: 40%;
+        z-index: 0;
+        left: 25%;
     }
 
     .side-header {

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Icon Inclusion-->
+    <link rel="icon" type="Image/PNG" href="../ICON/test.png"/>
+    <!--Font-Awesome Imports-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" />
+    <!--Side Header Favicon Import-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <!--EXTERNAL STYLESHEETS INCUSION-->
+    <link rel="stylesheet" type="text/CSS" href="./showroom.css"/>
+    <link rel="stylesheet" type="text/CSS" href="../mobiView.css"/>
+    <!--Code Credits @Easy Tutorials @ YouTube-->
+    <title>-SHOWROOM-</title>
+</head>
+<body>
+
+    <header>
+        <nav class="top-header thinRedBorder" role="navigation">  <!-- Top Navigation bar-->
+            <!--H-Menu Mobi Credits @CodingNepal-->
+        <label for="btn" class="icon">
+        <span class="fas fa-bars" ></span>
+        </label>
+        <input type="checkbox" name="" id="btn"/>
+    
+            <a href="../index.html"><img src="../ICON/test.png" class="logoImg" alt="Ommicang Clothn Logo"></a>              
+
+                <ul>
+                    <li>
+                    <label for="btn-1" class="show">OMMICANG's <span class="fa-solid fa-caret-down"></span></label>
+                    <a href="" class="rmv" >OMMICANG's</a>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="#">Natives</a></li>
+                        <li><a href="#">Official</a></li>
+                        <li><a href="#">Casuals</a></li>
+                        <li>
+                            <label for="btn-3" class="show">More<span class="fa fa-plus"></span></label>
+                            <a href="" class="rmv" >More<span class="fa fa-plus"></span></a>
+                            <input type="checkbox" id="btn-3">
+                            <ul>
+                                <li><a href="#">Casual Pro</a></li>
+                                <li><a href="#">Casual Vintage</a></li>
+            
+                            </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <label for="btn-2" class="show">S'Oge Concept <span class="fa-solid fa-caret-down"></span></label>
+                    <a href="#" class="rmv">S'Oge Concept</a>
+                     <input type="checkbox" id="btn-2">            
+                <ul>
+                    <li><a href="#">Natives</a></li>
+                    <li><a href="#">Official</a></li>
+                    <li><a href="#">Casuals</a></li>
+                </ul>
+                    </li>
+            
+
+                <li>
+                    <label for="btn-4" class="show">Zeina's Stitches <span class="fa-solid fa-caret-down"></span></label>
+                    <a href="" class="rmv">Zeina's Stitches </a>
+                    <input type="checkbox" id="btn-4">            
+
+            
+                    <ul>
+                        <li><a href="#">Natives</a></li>
+                        <li><a href="#">Official</a></li>
+                        <li><a href="#">Casuals</a></li>
+                    </ul>
+                        </li>
+                    </ul>
+                    
+
+                <!--<ul class="navMenu">
+                    <li class="navItem"><a class="navLink" href="./showroom.html">OMMICANG's</a></li>
+                    <li class="navItem"><a class="navLink" href="#Soge">S'Oge  Concept</a></li>
+                </ul>
+
+                </nav>-->
+
+
+
+            <!-- Toggle Button Add Starts Here-->
+            <input type="checkbox" id="toggle">
+            <label for="toggle" id="button"></label>
+         <!--Side Header Code Check-->
+         </nav>
+
+         <div class="side-header thinRedBorder">
+            <nav>
+            <ul>
+            <li ><a href="../index.html" title="Home">
+                <i class="fa-solid fa-house-chimney"></i>
+            </a> </li>
+            <li><a href="./showroom.html" title=" Showroom">
+                <i class="fa-solid fa-photo-film"></i>
+            </a></li>
+
+            <li><a href="../ommClothn-sub/sub-Page.html" title="About Us">
+                <i class="fa-solid fa-people-group"></i>
+            </a></li>
+            </ul>
+            <li><a href="../ommClothn-sub/sub-Page.html" title="Join Us">
+                <i class="fa-solid fa-handshake"></i>
+            </a></li>
+            <li><a href="../ommClothn-sub/sub-Page.html" title="Support">
+                <i class="fa-solid fa-headset"></i>
+            </a></li>
+        </ul>
+            </nav>
+
+
+    </div>
+
+    </header>
+
+    <!--Test Code for Real gallery-->
+    <div class="center-img" id="imgZoomContainer">
+        <img src="../sliderImage/OM2.jpg" id="imgZoom" alt="" />
+        <span onclick="closeImgZoom()">X</span>
+    </div>
+
+    
+    <div class="img-gallery">
+
+        <span>
+        <img src="../sliderImage/OM0.jpg" onclick="openImgZoom(this.src)" alt=""> 
+        <a href="https://wa.link/pzku2g">GET</a>
+        </span>
+
+        <span>
+        <img src="../sliderImage/OM1.jpg" onclick="openImgZoom(this.src)" alt="">
+        <a href="https://wa.link/pzku2g">GET</a>
+        </span>
+
+        <span>
+        <img src="../sliderImage/OM2.jpg" onclick="openImgZoom(this.src)" alt="">
+        <a href="">GET</a>
+        </span>
+
+        <span>
+        <img src="../sliderImage/OM3.jpg" onclick="openImgZoom(this.src)" alt="">
+        <a href="">GET</a>
+        </span>
+
+        <span>
+        <img src="../sliderImage/OM4.jpg" onclick="openImgZoom(this.src)" alt="">
+        <a href="">GET</a>
+        </span>
+
+        <span>
+        <img src="../sliderImage/OM5.jpg" onclick="openImgZoom(this.src)" alt="">
+        <a href="">GET</a>
+        </span>
+
+        <span>
+        <img src="../sliderImage/OM6.jpg" onclick="openImgZoom(this.src)" alt="">
+        <a href="">GET</a>
+        </span>
+
+        <span>
+        <img src="../sliderImage/OM7.jpg" onclick="openImgZoom(this.src)" alt="">
+        <a href="">GET</a>
+        </span>
+
+    </div>
+
+</body>
+<script src="./showroom.js"></script>
+</html>

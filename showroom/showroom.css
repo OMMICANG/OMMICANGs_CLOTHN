@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, main {
+    height:100%;
+  }
+  :root {
+    height: 100%;
+  }
+
+
+ /* DarkMode style */
+
+ :root {
+    --primary-color: linear-gradient(to bottom, #bea2e7 0%, #1e4266 100%);
+    --secondary-color: rgba(00, 00, 00, 0.5);
+    --border-primary: rgba(0, 0, 0, 0.9);
+    --top-headerCol:  rgba(44, 60, 92, 1);
+    --nav-headerCol: #bea2e7;
+    }
+    
+    .dark-mode {
+    --primary-color: linear-gradient(to bottom, #2e2d31 0%, #382a02 100%);
+    --secondary-color: #fff;
+    --border-primary: rgba(179, 0, 0, 0.9);
+    --top-headerCol: rgba(50, 50, 50, 1);
+    --nav-headerCol: #fff;
+    }
+    
+    body {
+      background: var(--primary-color);
+      color: var(--secondary-color);
+      font-family: sans-serif;
+      height: 100%;
+    }
+
+    .top-header{ /* header link*/
+        display: flex;
+        position: fixed;
+        z-index: 1;
+        background-color: var(--top-headerCol);
+        width: 100%;
+        height: 9%; /* new Height % use stead rem */
+        top:0;
+
+        }
+    
+        .logoImg {
+            height: 150px;
+            width:  180px; 
+           margin-top: -1rem;
+           float: left;
+        }
+
+        .logoImg:hover {
+          cursor: pointer;
+        }
+
+/*--- Credits : CodingNepal Youtube ---*/
+ 
+        
+       nav.top-header:after {
+          content: '';
+          clear: both;
+          display: table;
+        }
+        
+        
+        nav.top-header ul {
+          list-style-type: none;
+          margin-right: 40px;
+          position: relative;
+        }
+        
+        nav.top-header ul li {
+          float: left;
+          display: inline-block;
+          background: inherit;
+          color: var(--nav-headerCol);
+          margin: 0 5px;
+          margin-left: 5rem;
+          margin-right: 7rem;
+        }
+        
+        nav.top-header ul li a {
+          color: inherit;
+          text-decoration: none;
+          line-height: 68px;
+          font-size: 18px;
+          padding: 8px 15px;
+        }
+        
+        nav.top-header ul li a:hover {
+          color: cyan;
+          border-radius: 5px;
+          box-shadow: 0 0 5px #33ffff,
+                      0 0 5px #550fff;
+        }
+        
+        nav.top-header ul ul li a:hover{
+          color: cyan;
+          box-shadow: none;
+        
+        }
+        
+        nav.top-header ul ul {
+          position: absolute;
+          top: 90px;
+          border-top: 3px solid cyan;
+          opacity: 0;
+          visibility: hidden;
+          transition: top .3s ease-in-out;
+        }
+        
+        nav.top-header ul ul ul {
+          border-top: none;
+        }
+        
+        nav.top-header ul li:hover > ul{
+          top: 63px;
+          opacity: 1;
+          visibility: visible;
+          transition: all .5s ease-in-out;
+        }
+        
+        nav.top-header ul ul li {
+          position: relative;
+          margin: 0px;
+          width: 150px;
+          background: #1b1b1b;
+          float: none;
+          display: list-item;
+          border-bottom: 1px solid rgba(0,0,0,.3);
+        }
+        
+        nav.top-header ul ul li a {
+          line-height: 50px;
+          font-size: 17px;
+
+        }
+        
+        nav.top-header ul ul ul li {
+          position: relative;
+          top: -70px;
+          left: 150px;
+        }
+        
+        .fa-plus {
+          margin-left: 40px;
+          font-size: 15px;
+        
+        }
+
+        .fa-caret-down{
+          font-size: 10px;
+        }
+       /* .navMenu { /* navbar css
+          display: flex;
+          position: fixed;
+          list-style-type: none;
+          left: 40%;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: larger;    
+        }
+
+        .navMenu, .navItem { /* navbar Contd.
+
+          padding: 10px 0px 10px 0px;
+          margin: 0.1rem 30px 0px 0px ;
+          
+          
+        }
+        
+        .navItem, .navLink {
+          text-decoration: none;
+          /*color: rgba(77, 0, 0, 0.9) ;
+          color: var(--nav-headerCol);
+          text-align: center;
+        }
+        
+        .navLink:hover {
+          color: rgba(179, 0, 0, 0.9);
+          color: #bea2e7;
+          transform: scale(1, 1);
+          border-radius: 45%;
+        }
+        
+        .navLink:active {
+         color: #1e4266 ;
+        }*/
+        
+    
+        .thinBlackBorder { /* thin borderline*/
+          border-style: solid;
+          border-width: 0.0625rem 0.0625rem 0.0625rem 0.0625rem;
+          border-color: var(--border-primary);
+          }
+    
+          .thinRedBorder {
+          border-style: solid;
+          border-width: 0rem 0rem 0.0625rem;
+          border-color: rgba(179, 0, 0, 0.9);
+          }
+    
+          /* Toggle Button Starts Here */
+    
+          #toggle {
+            display: none;
+        }
+        
+        #button {
+            display: flex;
+            width: 50px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 30px;
+            position: fixed;
+            cursor: pointer;
+            top: 1.3rem;
+            left: 92%;
+        }
+        
+        #button::after {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f186" ;
+            /* Add in the image. You could also add an icon by the using the icon's unicode (sites like fontawesome.com provide this). */
+        width: 25px;
+        height: 25px;
+        /* Making the icon slightly taller than the button container. */
+        background-color: #e03c3c;
+        color: rgba(0, 0, 50, 0.8);
+        border: 2px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+        position: absolute;
+        top: -5px;
+        /* Since the button has a height of 35px and the ::after has 40px, we offset the difference by pushing it up by 5px to center this element vertically. */
+        left: 0;
+        display: grid;
+        /* Used for centering the icon image in the middle in conjunction with place content center. */
+        place-content: center;
+        line-height: 0;
+        /*By default this will have a line height. This means that the image will not be perfectly centered by using the properties above. To make sure we can center this image in the middle, we make the line height 0. */
+        transition: background-color 1.5s,
+            transform 1.3s ease-in; /* check to see if image transformation time can be altered*/
+    }
+    
+    #toggle:checked+#button::after {
+        content: url('./svgImg/moon-svgrepo-com.svg');
+        /* Switching the images when clicked. */
+        background-color: #1f257f;
+        font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f185" ; 
+          color: rgba(250, 150, 50, 150.9);
+        transform: translateX(20px) rotate(360deg);
+        /* Since the width of the button is 90px and the pseudo element is 40px we translate by a number that adds up to 90. So we translate to the right by 50px ( 40 + 50 = 90 width of the button). We also rotate this element by 360 degrees. */
+    }
+    
+          /* Toggle Button Ends Here */
+    
+          /*----- SIDE HEADER CODE START -----*/
+          .side-header {
+            background-color: rgba(0, 11, 16, 0.9);
+            height: 91%;
+            width: 5%;
+            z-index: 0;
+            display: flex;
+            position: fixed;
+            top: 9%;
+            border-style: solid;
+          border-width: 0rem 0.0625rem 0rem 0rem  ;
+          border-color: rgba(179, 0, 0, 0.9);
+          justify-content: center;
+        }
+    
+           li, .fa-solid {
+          color: #fff;
+          list-style: none;
+          margin-top: 2.8rem;
+          cursor: pointer;
+    
+        }
+    
+        li, .fa-solid:hover{
+          color: rgba(50, 0, 0, 1);
+          transition: color 0.5s ease-in;
+        }
+    
+        /*---- SIDE HEADER CODE END -----*/
+
+    /*--- IMG GALLERY CODE STARTS HERE ----*/
+
+.img-gallery {
+
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 30px;
+
+
+}
+
+.img-gallery img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+
+    
+}
+
+.img-gallery img:hover {
+    transform: scale(0.8) rotate(-15deg);
+    transition: all 0.5s ease-in-out;
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+    
+}
+
+.center-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+}
+
+.center-img img{
+    width: 90%;
+    max-width: 500px;
+}
+
+.center-img span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*
+
+.img-gallery a {
+  text-decoration: none;
+  margin-top: 15px;
+  padding: 20px 60px;
+  border-radius: 25px;
+  color: #fff;
+  background: linear-gradient(to bottom, #bea2e7 0%, #1e4266 100%);
+  transition: all 0.3s ease;
+  font-family: 'Times New Roman', Times, serif;
+  display: inline;
+  position: absolute;
+}
+
+.img-gallery a:hover {
+transform: scale(0.94);
+border: 0.1px dotted black;
+
+}*/
+
+span a {
+  display: inline;
+  position: relative;
+  text-decoration: none;
+  top: -3rem;
+  padding: 20px 30px;
+  border-radius: 25px;
+  color: #fff;
+  background: linear-gradient(to bottom, #bea2e7 0%, #1e4266 100%);
+  transition: all 0.3s ease;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+/*--- Credits : CodingNepal Youtube ---*/
+
+ 
+.icon{
+  font-size: 30px;
+  color: #fff;
+  line-height: 45px;
+  margin-right: 0;
+  cursor: pointer;
+  display: none;
+}
+
+#btn {
+  display: none;
+}
+
+.show, input{
+  display: none;
+}
+
+@media all and (max-width: 968px) {
+
+  nav.top-header ul {
+    margin-right: 0px;
+    float: left;
+    position: fixed;
+    width: 100%;
+    background: #2c3e50;
+    top: 9%;
+    left: -100%;
+    transition: all .5s ease-in-out;
+  }
+
+
+  nav.top-header ul li, nav.top-header ul ul li{
+    display: block;
+    width: 100%;
+  }
+
+  nav.top-header ul ul {
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav.top-header ul ul ul li{
+    position: static;
+  }
+
+  nav.top-header ul ul li {
+    border-bottom: 0px;
+  }
+
+  nav.top-header ul ul a{
+    padding-left: 40px;
+  }
+
+  nav.top-header ul ul ul a{
+    padding-left: 80px;
+  }
+
+  .show{
+    display: block;
+    color: var(--primary-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+
+  .icon{
+    display: block;
+    position: fixed;
+    left: 90%;
+
+  }
+  
+
+  span.cancel:before{
+    content: '\f00d';
+  }
+  
+  nav.top-header ul li {
+    display: block;
+    margin: 20px 0;
+    line-height: 20px;
+  }
+
+  nav.top-header ul li a {
+    font-size: 25px;
+  }
+  a:hover, a.active {
+    background: none;
+    color: #0082e6;
+  }
+  
+  #btn:checked ~ ul {
+    left: 6%;
+  }
+
+  [id*=btn]:checked + ul{
+    display: block;
+  }
+
+  .rmv{
+    display: none;
+  }
+  
+
+}
