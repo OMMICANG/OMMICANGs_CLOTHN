@@ -1,3 +1,13 @@
+    //preloader Call Credits @ProMaker Dev YouTube.
+
+    var loader = document.getElementById("loader")
+    console.log(loader);
+    window.addEventListener("load", vanish)
+
+    function vanish() {
+        loader.classList.add("disappear");
+    }
+
       // DarkMode feature
 
       var lightBulb = document.getElementById("button");
