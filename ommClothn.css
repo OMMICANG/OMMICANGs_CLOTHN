@@ -126,7 +126,7 @@ html, body, main {
 .top-header{ /* header link*/
     display: flex;
     position: fixed;
-    z-index: 100;
+    z-index: 8;
     background-color: var(--top-headerCol);
     width: 100%;
     height: 7%; /* new Height % use stead rem */
