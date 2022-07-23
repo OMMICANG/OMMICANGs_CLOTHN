@@ -334,11 +334,11 @@ html, body, main {
 .swiper  .swiper-pagination {
   bottom: -95%;
   left: 5%;
-
+  z-index: 8;
 }
 
 .swiper .swiper-pagination-bullet-active{
-  background-color: #fff; /* Reminder to check why background color doesn't switch*/
+  background: #fff; /* Reminder to check why background color doesn't switch*/
 }
 
 /*---- H-SLIDER ENDS HERE */
