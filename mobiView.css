@@ -21,6 +21,51 @@
         left: 25%;
     }
 
+    /* Timer popUp Starts Here */
+
+#popUp {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 55%;
+    height: 6.5%;
+    font-size: smaller;
+    background-color: transparent;
+    z-index: 1;
+    margin-left: 27%;
+    justify-content: center;
+    overflow: hidden;
+    
+  }
+  
+  #Yes {
+    margin-top: 1.3rem;
+    border: 0.5px solid;
+    border-radius: 20%;
+    cursor: pointer;
+    margin-left: -8.5rem;
+    padding: 1px;
+  }
+  
+  #No {
+    margin-top: 1.3rem;
+    border: 0.5px solid;
+    border-radius: 20%;
+    cursor: pointer;
+    padding: 1px;
+  }
+  
+  #Yes:hover, #No:hover {
+    background-color: var(--top-headerCol) ;
+    color: var(--border-primary);
+    color: cyan;
+          border-radius: 5px;
+          box-shadow: 0 0 5px #33ffff,
+                      0 0 5px #550fff;
+  }
+  
+  /* Timer popUp Ends Here */
+
     .side-header {
         background-color: rgba(0, 11, 16, 0.9);
         height: 94%;

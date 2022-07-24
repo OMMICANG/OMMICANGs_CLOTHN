@@ -204,10 +204,58 @@ html, body, main {
       content: "\f185" ; 
       color: rgba(250, 150, 50, 150.9);
     transform: translateX(20px) rotate(360deg);
+    transition: all 2s ease-in-out;
     /* Since the width of the button is 90px and the pseudo element is 40px we translate by a number that adds up to 90. So we translate to the right by 50px ( 40 + 50 = 90 width of the button). We also rotate this element by 360 degrees. */
 }
 
       /* Toggle Button Ends Here */
+
+
+      /* Timer popUp Starts Here */
+
+#popUp {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 25%;
+  height: 7%;
+  background-color: transparent;
+  z-index: 1;
+  margin-left: 35%;
+  justify-content: center;
+  overflow: hidden;
+  
+  }
+  
+  #Yes {
+  margin-top: 1.3rem;
+  border: 0.5px solid;
+  border-radius: 20%;
+  cursor: pointer;
+  margin-left: -10rem;
+  padding: 2px;
+  }
+  
+  #No {
+  margin-top: 1.3rem;
+  border: 0.5px solid;
+  border-radius: 20%;
+  cursor: pointer;
+  padding: 2px;
+  
+  }
+  
+  #Yes:hover, #No:hover {
+  background-color: var(--top-headerCol) ;
+  color: var(--border-primary);
+  color: cyan;
+          border-radius: 5px;
+          box-shadow: 0 0 5px #33ffff,
+                      0 0 5px #550fff;
+  }
+  
+  /* Timer popUp Ends Here */
+  
 
 
     .side-header {
