@@ -17,9 +17,9 @@
         document.body.classList.toggle("dark-mode");
 
         if (document.body.classList.contains('dark-mode')){
-            localStorage.setItem('dark-mode', 'enabled');
+            sessionStorage.setItem('dark-mode', 'enabled');
         } else {
-            localStorage.setItem('dark-mode','disabled');
+            sessionStorage.setItem('dark-mode','disabled');
         }
 
 
@@ -36,7 +36,7 @@
 
         
 
-        if (localStorage.getItem('dark-mode')=='enabled'){
+        if (sessionStorage.getItem('dark-mode')=='enabled'){
             document.body.classList.toggle('dark-mode');
             ToggleOn.checked = true;
 
@@ -48,7 +48,7 @@
 
 
        // BGmusic Starts Here
-var timer = setInterval(() => {
+/*var timer = setInterval(() => {
     document.getElementById("popUp").style.display = "flex";
     
     var getMusic= document.getElementById("Yes");
@@ -91,7 +91,7 @@ var timer = setInterval(() => {
         reset.currentTime = 0;
       }
     } 
-    // BGmusic Ends Here
+    // BGmusic Ends Here*/
    
       
 

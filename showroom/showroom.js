@@ -1,17 +1,17 @@
  // DarkMode feature
 
  var lightBulb = document.getElementById("button");
- var toggle = document.getElementById('toggle');
+ var ToggleOn = document.getElementById('toggle');
  lightBulb.onclick = ()=>{
    
    document.body.classList.toggle("dark-mode");
-   toggle.classList.toggle('dark-mode');
 
    if (document.body.classList.contains('dark-mode')){
-       localStorage.setItem('dark-mode', 'enabled');
+       sessionStorage.setItem('dark-mode', 'enabled');
    } else {
-       localStorage.setItem('dark-mode','disabled');
+       sessionStorage.setItem('dark-mode','disabled');
    }
+
 
    // lightBulb Icon change functionality
    //if(document.body.classList.contains("dark-mode")){
@@ -26,9 +26,10 @@
 
    
 
-   if (localStorage.getItem('dark-mode')=='enabled'){
+   if (sessionStorage.getItem('dark-mode')=='enabled'){
        document.body.classList.toggle('dark-mode');
-       toggle.classList.toggle('dark-mode');
+       ToggleOn.checked = true;
+
    }
  
  //}
