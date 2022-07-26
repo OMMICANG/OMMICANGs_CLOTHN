@@ -378,12 +378,12 @@ span .a {
   text-decoration: none;
   top: -3rem;
   padding: 20px 30px;
+  margin-left: 0.1rem;
   border-radius: 25px;
   color: #fff;
   background: linear-gradient(to bottom, #bea2e7 0%, #1e4266 100%);
   transition: all 0.3s ease;
   font-family: 'Times New Roman', Times, serif;
-
 }
 
 span h5{
@@ -433,8 +433,10 @@ display: inline;
 span a:hover {
   color: cyan;
   transition: all 1s ease-in;
+  transform: scale(0.94px);
 }
 
+/*---- RWD Showroom Starts Here ---*/
 
 @media all and (max-width: 968px) {
 
@@ -496,12 +498,12 @@ span a:hover {
     width: 80%;
     margin: 80px auto 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(85px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     grid-gap: 50px;
 
 
 }
-
+/* 
 span .a {
     display: inline;
     position: relative;
@@ -512,17 +514,17 @@ span .a {
     color: #fff;
     background: linear-gradient(to bottom, #bea2e7 0%, #1e4266 100%);
     transition: all 0.3s ease;
-    font-size: 13px;
+    font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
   
-  }
+  } */
 
   span h5{
     margin-top: -1.4rem;
     padding: 5px;
     text-align: center;
     word-spacing: 5px;
-    font-size: 13px;
+    font-size: 17px;
     font-family: 'montserrat';
   }
   span h6{
@@ -530,7 +532,7 @@ span .a {
     padding: 5px;
     text-align: center;
     word-spacing: 5px;
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'montserrat';
   }
  span .h{
