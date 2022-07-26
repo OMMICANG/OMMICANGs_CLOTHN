@@ -300,8 +300,8 @@ html, body, main {
     width: 80%;
     margin: 100px auto 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 55px;
 
 
 }
@@ -372,7 +372,7 @@ border: 0.1px dotted black;
 
 }*/
 
-span a {
+span .a {
   display: inline;
   position: relative;
   text-decoration: none;
@@ -385,6 +385,30 @@ span a {
   font-family: 'Times New Roman', Times, serif;
 
 }
+
+span h5{
+  margin-top: -1.4rem;
+  padding: 5px;
+  text-align: center;
+  word-spacing: 5px;
+  font-size: 17px;
+  font-family: 'montserrat';
+}
+span h6{
+  margin-top: -0.5rem;
+  padding: 5px;
+  text-align: center;
+  word-spacing: 5px;
+  font-size: 14px;
+  font-family: 'montserrat';
+}
+span .h{
+display: inline;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+}
+
 
 /*--- Credits : CodingNepal Youtube ---*/
 
@@ -405,6 +429,12 @@ span a {
 .show, input{
   display: none;
 }
+
+span a:hover {
+  color: cyan;
+  transition: all 1s ease-in;
+}
+
 
 @media all and (max-width: 968px) {
 
@@ -466,13 +496,13 @@ span a {
     width: 80%;
     margin: 80px auto 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
-    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(130px,1fr));
+    grid-gap: 50px;
 
 
 }
 
-span a {
+span .a {
     display: inline;
     position: relative;
     text-decoration: none;
@@ -487,6 +517,28 @@ span a {
   
   }
 
+  span h5{
+    margin-top: -1.4rem;
+    padding: 5px;
+    text-align: center;
+    word-spacing: 5px;
+    font-size: 13px;
+    font-family: 'montserrat';
+  }
+  span h6{
+    margin-top: -0.5rem;
+    padding: 5px;
+    text-align: center;
+    word-spacing: 5px;
+    font-size: 13px;
+    font-family: 'montserrat';
+  }
+ span .h{
+  display: inline;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+ }
 /*------ Showroom RWD Ends Here ------*/
 
 
@@ -511,11 +563,7 @@ span a {
   nav.top-header ul li a {
     font-size: 25px;
   }
-  a:hover, a.active {
-    background: none;
-    color: #0082e6;
-  }
-  
+
   #btn:checked ~ ul {
     left: 6%;
   }
