@@ -91,7 +91,7 @@
         reset.currentTime = 0;
       }
     } 
-    // BGmusic Ends Here*/z
+    // BGmusic Ends Here*/
    
       
 
